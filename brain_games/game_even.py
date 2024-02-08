@@ -10,19 +10,22 @@ def welcome_user():
     return name
 
 
+def get_correct_answer(number):
+    if number % 2 == 0:
+        return 'yes'
+    else:
+        return 'no'
+
+
 def game_even(name):
     print('Answer "yes" if the number is even, otherwise answer "no".')
     for i in range(3):
         number = randint(1, 100)
 
-        if number % 2 == 0:
-            correct_answer = 'yes'
-        else:
-            correct_answer = 'no'
-
         print(f'Question: {number}')
         answer = prompt.string('Your answer: ')
-
+        correct_answer = get_correct_answer(number)
+        
         if correct_answer == answer.lower():
             print('Correct!')
         else:
