@@ -1,10 +1,6 @@
 from random import randint
 
 
-def game_even() -> str:
-    return 'game_even'
-
-
 def get_task() -> str:
     return 'Answer "yes" if the number is even, otherwise answer "no".'
 

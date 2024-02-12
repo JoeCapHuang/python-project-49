@@ -1,10 +1,6 @@
 import random
 
 
-def game_calc():
-    return 'game_calc'
-
-
 def get_task() -> str:
     return 'What is the result of the expression?'
 
