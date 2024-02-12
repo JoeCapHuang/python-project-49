@@ -9,6 +9,13 @@ def welcome_user():
     return name
 
 
+def make_string(exercise):
+    if type(exercise) is not int:
+        return ' '.join(map(str, exercise))
+    else:
+        return str(exercise)
+
+
 def start_game(game):
     name = welcome_user()
 
@@ -16,7 +23,7 @@ def start_game(game):
 
     for i in range(3):
         exercise = game.get_exercise()
-        print(f'Question: {exercise}')
+        print(f'Question: {make_string(exercise)}')
         answer = prompt.string('Your answer: ')
         correct_answer = str(game.get_correct_answer(exercise))
 
