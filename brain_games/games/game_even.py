@@ -13,10 +13,3 @@ def get_exercise_and_answer():
         answer = 'no'
 
     return exercise, answer
-
-
-# def get_correct_answer(number: int) -> str:
-#     if number % 2 == 0:
-#         return 'yes'
-#     else:
-#         return 'no'
