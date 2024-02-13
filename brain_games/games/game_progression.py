@@ -13,6 +13,7 @@ def get_exercise_and_answer():
     if len(raw_progression) > 10:
         progression = raw_progression[:10]
         max_index = len(progression) - 1
+
     else:
         progression = raw_progression
         max_index = len(raw_progression) - 1
@@ -20,5 +21,6 @@ def get_exercise_and_answer():
     random_index = randint(0, max_index)
     answer = progression[random_index]
     progression[random_index] = '..'
+    
     exercise = progression
     return exercise, answer

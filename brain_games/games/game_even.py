@@ -7,8 +7,10 @@ def get_task() -> str:
 
 def get_exercise_and_answer():
     exercise = randint(1, 100)
+
     if exercise % 2 == 0:
         answer = 'yes'
+
     else:
         answer = 'no'
 
