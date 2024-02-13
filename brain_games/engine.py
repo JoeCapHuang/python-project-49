@@ -30,7 +30,8 @@ def start_game(game):
             print('Correct!')
 
         else:
-            print(f"{answer} is wrong answer ;(. Correct answer was {correct_answer}. Let's try again, {name}!")
+            print(f"{answer} is wrong answer ;(. Correct answer was "
+                  f"{correct_answer}. Let's try again, {name}!")
             sys.exit()
 
     print(f'Congratulations, {name}!')
