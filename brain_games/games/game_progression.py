@@ -21,6 +21,6 @@ def get_exercise_and_answer():
     random_index = randint(0, max_index)
     answer = progression[random_index]
     progression[random_index] = '..'
-    
     exercise = progression
+
     return exercise, answer
