@@ -13,16 +13,28 @@ def get_random(unit: str) -> int:
         return random.choice(["+", "-", "*"])
 
 
-def get_exercise():
-    return get_random('num'), get_random('operator'), get_random('num')
+def get_exercise_and_answer():
+    exercise = get_random('num'), get_random('operator'), get_random('num')
+    answer = None
 
-
-def get_correct_answer(exercise: tuple) -> int:
     if exercise[1] == '+':
-        return exercise[0] + exercise[2]
+        answer = exercise[0] + exercise[2]
 
     elif exercise[1] == '-':
-        return exercise[0] - exercise[2]
+        answer = exercise[0] - exercise[2]
 
     elif exercise[1] == '*':
-        return exercise[0] * exercise[2]
+        answer = exercise[0] * exercise[2]
+
+    return exercise, answer
+
+
+# def get_correct_answer(exercise: tuple) -> int:
+#     if exercise[1] == '+':
+#         return exercise[0] + exercise[2]
+#
+#     elif exercise[1] == '-':
+#         return exercise[0] - exercise[2]
+#
+#     elif exercise[1] == '*':
+#         return exercise[0] * exercise[2]

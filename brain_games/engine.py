@@ -22,12 +22,11 @@ def start_game(game):
     print(game.get_task())
 
     for i in range(3):
-        exercise = game.get_exercise()
+        exercise, correct_answer = game.get_exercise_and_answer()
         print(f'Question: {make_string(exercise)}')
         answer = prompt.string('Your answer: ')
-        correct_answer = str(game.get_correct_answer(exercise))
 
-        if correct_answer == answer:
+        if str(correct_answer) == answer:
             print('Correct!')
 
         else:
