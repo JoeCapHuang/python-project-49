@@ -14,7 +14,8 @@ def get_random(unit: str) -> int:
 
 
 def get_exercise_and_answer():
-    exercise = get_random('num'), get_random('operator'), get_random('num')
+    exercise = (random.randint(1, 50), random.choice(["+", "-", "*"]),
+                random.randint(1, 50))
     answer = None
 
     if exercise[1] == '+':
@@ -26,4 +27,4 @@ def get_exercise_and_answer():
     elif exercise[1] == '*':
         answer = exercise[0] * exercise[2]
 
-    return exercise, answer
+    return ' '.join(map(str, exercise)), answer
