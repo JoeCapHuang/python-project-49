@@ -15,7 +15,7 @@ def start_game(game):
     name = welcome_user()
     print(game.TASK)
 
-    for i in range(GAME_ROUNDS):
+    for _ in range(GAME_ROUNDS):
         exercise, correct_answer = game.get_exercise_and_answer()
         print(f'Question: {exercise}')
         answer = prompt.string('Your answer: ')

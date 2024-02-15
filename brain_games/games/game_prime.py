@@ -15,8 +15,8 @@ def is_prime(num: int) -> bool:
     while i <= num:
         if numbers[i] != 0:
             prime_nums.append(numbers[i])
-            for j in range(i, num + 1, i):
-                numbers[j] = NOT_PRIME
+            for _ in range(i, num + 1, i):
+                numbers[_] = NOT_PRIME
         i += 1
     return num in prime_nums
 
