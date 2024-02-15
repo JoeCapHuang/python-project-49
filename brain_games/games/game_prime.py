@@ -2,15 +2,23 @@ from random import randint
 
 
 TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+NOT_PRIME = 0
+MIN_NUMBER = 2
 
 
 def is_prime(num: int) -> bool:
-    prime_numbers = (2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41,
-                     43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97)
-    if num in prime_numbers:
-        return True
-    else:
-        return False
+    numbers = [i for i in range(num + 1)]
+    numbers[1] = NOT_PRIME
+    prime_nums = []
+
+    i = MIN_NUMBER
+    while i <= num:
+        if numbers[i] != 0:
+            prime_nums.append(numbers[i])
+            for j in range(i, num + 1, i):
+                numbers[j] = NOT_PRIME
+        i += 1
+    return num in prime_nums
 
 
 def get_exercise_and_answer():
