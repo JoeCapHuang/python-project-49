@@ -1,8 +1,7 @@
 from random import randint
 
 
-def get_task() -> str:
-    return 'Answer "yes" if given number is prime. Otherwise answer "no".'
+TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def is_prime(num: int) -> bool:

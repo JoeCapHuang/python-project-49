@@ -1,8 +1,7 @@
 from random import randint
 
 
-def get_task() -> str:
-    return 'What number is missing in the progression?'
+TASK = 'What number is missing in the progression?'
 
 
 def get_exercise_and_answer():

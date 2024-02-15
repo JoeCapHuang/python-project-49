@@ -1,8 +1,7 @@
 from random import randint
 
 
-def get_task() -> str:
-    return 'Answer "yes" if the number is even, otherwise answer "no".'
+TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def get_exercise_and_answer():

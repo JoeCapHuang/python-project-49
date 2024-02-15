@@ -1,8 +1,7 @@
 import random
 
 
-def get_task() -> str:
-    return 'What is the result of the expression?'
+TASK = 'What is the result of the expression?'
 
 
 def get_random(unit: str) -> int:

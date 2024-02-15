@@ -13,7 +13,7 @@ GAME_ROUNDS = 3
 
 def start_game(game):
     name = welcome_user()
-    print(game.get_task())
+    print(game.TASK)
 
     for i in range(GAME_ROUNDS):
         exercise, correct_answer = game.get_exercise_and_answer()

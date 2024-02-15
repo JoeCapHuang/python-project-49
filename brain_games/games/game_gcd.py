@@ -1,15 +1,14 @@
 from random import randint
 
 
-def get_task() -> str:
-    return 'Find the greatest common divisor of given numbers.'
+TASK = 'Find the greatest common divisor of given numbers.'
 
 
 def get_exercise_and_answer():
     nums = randint(1, 100), randint(1, 100)
     first_number, second_number = nums
     exercise = ' '.join(map(str, nums))
-    
+
     while first_number != 0 and second_number != 0:
 
         if first_number > second_number:
