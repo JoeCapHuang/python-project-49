@@ -4,7 +4,7 @@ from random import randint
 TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def is_even(num):
+def is_even(num: int) -> bool:
     return num % 2 == 0
 
 
