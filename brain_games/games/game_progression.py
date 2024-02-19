@@ -2,20 +2,20 @@ from random import randint
 
 
 TASK = 'What number is missing in the progression?'
+MIN_ELEMENTS = 5
+MAX_ELEMENTS = 10
 
 
 def get_exercise_and_answer():
-    beginning, end, step = (randint(1, 15), randint(85, 100), randint(2, 8))
+    beginning, step = (randint(1, 15), randint(2, 8))
 
-    raw_progression = list(range(beginning, end, step))
+    progression = []
 
-    if len(raw_progression) > 10:
-        progression = raw_progression[:10]
-        max_index = len(progression) - 1
+    for _ in range(randint(MIN_ELEMENTS, MAX_ELEMENTS)):
+        progression.append(beginning)
+        beginning += step
 
-    else:
-        progression = raw_progression
-        max_index = len(raw_progression) - 1
+    max_index = len(progression) - 1
 
     random_index = randint(0, max_index)
     answer = progression[random_index]
