@@ -62,17 +62,14 @@
     echo 'export PATH="/usr/bin/python3.10:$PATH"' >> ~/.bashrc
     source ~/.bashrc
     ```
-
-### Установка зависимостей
-
-    
-    make install
-    
-
 ### Клонирование репозитория:
 
     git clone https://github.com/JoeCapHuang/hexlet-code.git
     cd hexlet-code
+
+### Установка зависимостей
+
+    make install
 
 ### Запуск игр (до установки пакета)
 
