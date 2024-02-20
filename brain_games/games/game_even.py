@@ -11,10 +11,6 @@ def is_even(num: int) -> bool:
 def get_exercise_and_answer():
     exercise = randint(1, 100)
 
-    if is_even(exercise):
-        answer = 'yes'
-
-    else:
-        answer = 'no'
+    answer = 'yes' if is_even(exercise) else 'no'
 
     return exercise, answer
