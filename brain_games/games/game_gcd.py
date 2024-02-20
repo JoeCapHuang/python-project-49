@@ -6,8 +6,7 @@ TASK = 'Find the greatest common divisor of given numbers.'
 
 
 def get_exercise_and_answer():
-    nums = randint(1, 100), randint(1, 100)
-    first_number, second_number = nums
+    first_number, second_number = nums = randint(1, 100), randint(1, 100)
 
     exercise = ' '.join(map(str, nums))
     answer = gcd(first_number, second_number)
