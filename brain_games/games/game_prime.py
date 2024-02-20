@@ -2,32 +2,22 @@ from random import randint
 
 
 TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".'
-NOT_PRIME = 0
 FIRST_PRIME_NUMBER = 2
+NOT_PRIME = 1
 
 
 def is_prime(num: int) -> bool:
-    numbers = [i for i in range(num + 1)]
-    numbers[1] = NOT_PRIME
-    prime_nums = []
-
-    i = FIRST_PRIME_NUMBER
-    while i <= num:
-        if numbers[i] != NOT_PRIME:
-            prime_nums.append(numbers[i])
-            for j in range(i, num + 1, i):
-                numbers[j] = NOT_PRIME
-        i += 1
-    return num in prime_nums
+    if num <= NOT_PRIME:
+        return False
+    for i in range(FIRST_PRIME_NUMBER, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
 
 
 def get_exercise_and_answer():
     exercise = randint(1, 50)
 
-    if is_prime(exercise):
-        answer = 'yes'
-
-    else:
-        answer = 'no'
+    answer = 'yes' if is_prime(exercise) else 'no'
 
     return exercise, answer
