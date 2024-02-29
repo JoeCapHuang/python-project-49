@@ -64,15 +64,16 @@
     ```
 ### Клонирование репозитория:
 
-    git clone https://github.com/JoeCapHuang/hexlet-code.git
+    git clone https://github.com/JoeCapHuang/python-project-49
     cd hexlet-code
 
 ### Установка зависимостей
-
-    make install
-
+1. Установите poetry
+2. Установка зависимостей:
+    ```bash
+    make install```
+   
 ### Запуск игр (до установки пакета)
-
 Перед установкой пакета вы можете запустить игры напрямую из исходного кода. Используйте следующие команды для запуска каждой из игр:
 
 1. "Проверка на чётность"
